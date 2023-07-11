@@ -30,7 +30,7 @@ try:
      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
      # write your own comment - what does this do?
      streamlit.dataframe(fruityvice_normalized)
-except URL Error as e:
+except URLError as e:
   streamlit.error()
 # stopping temporarily
 streamlit.stop()
