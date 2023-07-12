@@ -19,7 +19,10 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries','Banana'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 not_to_show =  list(set(my_fruit_list)^set(fruits_to_show)) #  my_fruit_list-fruits_to_show
+streamlit.text(my_fruit_list)
+streamlit.text(fruits_to_show)
 streamlit.text(not_to_show)
+
 #streamlit.dataframe(not_to_show)
 
 #Create the repeatable code block (called a function)
